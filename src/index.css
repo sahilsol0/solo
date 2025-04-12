@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-display: "Geist", "sans-serif";
+
+    --color-lime-fg: #6FA617;
+    --color-lime-bg: #C8FF70;
+  }
