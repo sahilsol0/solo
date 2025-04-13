@@ -1,7 +1,8 @@
+import { motion } from "motion/react"
 import faceImg from "../assets/images/face.png"
 import { ArrowUpRight } from "lucide-react"
 
-function ContactSection() {
+function ContactSection({animation}) {
 
     const contacts = [
         {id: 1, text: "sahilsolomon101@gmail.com", href: "mailto:sahilsolomon101@gmail.com"},
@@ -15,9 +16,13 @@ function ContactSection() {
             <ul className="flex flex-col items-center">
                 {
                     contacts.map((contact) => (
-                        <li key={contact.id}>
+                        <motion.li 
+                            key={contact.id}
+                            {...animation}
+                            transition={{ delay: 0.2 * contact.id, duration: 1, ease: 'easeInOut' }}
+                        >
                             <a href={contact.href} target="#" className="flex">{contact.text}<ArrowUpRight /></a>
-                        </li>
+                        </motion.li>
                     ))
                 }
             </ul>
