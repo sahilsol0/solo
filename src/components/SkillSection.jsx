@@ -1,3 +1,5 @@
+import SplitStaggerText from "./animation/SplitStaggerText.jsx"
+
 function SkillSection() {
 
     const skills = [
@@ -11,6 +13,7 @@ function SkillSection() {
     return (
         <section className="px-10 py-24 flex flex-col items-center gap-10">
             <h1 className="font-black text-4xl tracking-tighter">Skill set</h1>
+            {/* <SplitStaggerText text="Skill set" delay={0.5} style="font-black text-4xl tracking-tighter"/> */}
             <div className="text-2xl/7 font-medium tracking-tighter flex flex-col gap-10">
                 {
                     skills.map((skill) => (
