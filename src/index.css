@@ -2,8 +2,15 @@
 @import "tailwindcss";
 
 @theme {
-    --font-display: "Geist", "sans-serif";
+  --font-display: "Geist", "sans-serif";
 
-    --color-lime-fg: #6FA617;
-    --color-lime-bg: #C8FF70;
-  }
+  --color-lime-fg: #6FA617;
+  --color-lime-bg: #C8FF70;
+
+  --tracking-tightest: -0.06em;
+}
+
+* {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+}
