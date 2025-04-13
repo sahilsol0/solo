@@ -1,4 +1,5 @@
 import faceImg from "../assets/images/face.png"
+import { ArrowUpRight } from "lucide-react"
 
 function ContactSection() {
 
@@ -7,14 +8,16 @@ function ContactSection() {
         {id: 2, text: "github-sahilsol0", href: "https://github.com/sahilsol0"},
     ]
     return (
-        <section className="bg-black text-white py-10 flex flex-col items-center gap-10">
+        <section className="bg-black text-white py-16 flex flex-col items-center gap-8">
             <h1 className="text-3xl/6 font-normal tracking-tighter">CONTACT ME</h1>
             <div className="w-32"><img src={faceImg} alt="" className="fit rounded-full"/></div>
 
-            <ul>
+            <ul className="flex flex-col items-center">
                 {
                     contacts.map((contact) => (
-                        <li key={contact.id} className="text-center"><a href={contact.href} target="#">{contact.text}</a></li>
+                        <li key={contact.id}>
+                            <a href={contact.href} target="#" className="flex">{contact.text}<ArrowUpRight /></a>
+                        </li>
                     ))
                 }
             </ul>

@@ -1,3 +1,7 @@
+import { useState, useEffect } from 'react';
+import { motion, useScroll, useSpring, useTransform, AnimatePresence } from 'motion/react';
+import Loading from "./components/Loading.jsx"
+import HeroSection from "./components/HeroSection.jsx"
 import AboutSection from "./components/AboutSection.jsx"
 import SkillSection from "./components/SkillSection.jsx"
 import ResumeSection from "./components/ResumeSection.jsx"
@@ -5,19 +9,36 @@ import ContactSection from "./components/ContactSection.jsx"
 
 function App() {
 
+	const firstName = "Sahil"
+	const lastName = "Solomon"
+
+	const { scrollYProgress } = useScroll();
+	const scaleX = useSpring(scrollYProgress)
+	const headerY = useTransform(scrollYProgress, [0, .1], [0, -500]);
+	const [isLoading, setIsLoading] = useState(true);
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setIsLoading(false);
+		}, 1000);
+
+		return () => clearTimeout(timer);
+	}, []);
+
 	return (
 		<>
-			<header className="text-2xl/5 px-10 py-10 tracking-tighter font-semibold ">
-				Sahil<br />Solomon.
-			</header>
-
-			<section className="py-28 font-semibold text-center min-h-dvh">
-				<p className="text-xl mb-4 tracking-tighter">Hello</p>
-				<p className="text-5xl/10 px-24 tracking-tightest">
-					I’m Sahil, a Python developer with a creative mind.
-				</p>
-			</section>
-
+			<AnimatePresence>
+				{isLoading && (<Loading />)}
+			</AnimatePresence>
+			
+			<motion.header 
+				style={{ y: headerY,  }}
+				className="fixed text-2xl/5 px-10 py-10 tracking-tighter font-semibold z-10"
+			>
+				{firstName}<br />{lastName}.
+			</motion.header>
+			
+			<HeroSection name= {firstName}/>
 			<AboutSection />
 			<SkillSection />
 
@@ -28,6 +49,24 @@ function App() {
 
 			<ResumeSection />
 			<ContactSection />
+			<footer className="bg-black text-white text-center text-[0.6rem] font-normal py-4">
+				<p>Made with ❤️ by {firstName} {lastName}.</p>
+				<p>&copy; 2025 {firstName} {lastName}. All rights reserved.</p>
+			</footer>
+
+			<motion.div
+                id="scroll-indicator"
+                style={{
+                    scaleX: scaleX,
+                    position: "fixed",
+                    bottom: -1,
+                    left: 0,
+                    right: 0,
+                    height: 8,
+                    originX: 0,
+                }}
+				className="bg-lime-fg"
+			/>
 		</>
 	)
 }
