@@ -7,6 +7,7 @@ function ContactSection({animation}) {
     const contacts = [
         {id: 1, text: "sahilsolomon101@gmail.com", href: "mailto:sahilsolomon101@gmail.com"},
         {id: 2, text: "github-sahilsol0", href: "https://github.com/sahilsol0"},
+        {id: 3, text: "linkedin-Sahil Solomon", href: "https://www.linkedin.com/in/sahil-solomon/"},
     ]
     return (
         <section className="bg-black text-white py-16 flex flex-col items-center gap-8">
@@ -21,7 +22,7 @@ function ContactSection({animation}) {
                             {...animation}
                             transition={{ delay: 0.2 * contact.id, duration: 1, ease: 'easeInOut' }}
                         >
-                            <a href={contact.href} target="#" className="flex">{contact.text}<ArrowUpRight /></a>
+                            <a href={contact.href} target="#" className="flex items-end">{contact.text}<ArrowUpRight /></a>
                         </motion.li>
                     ))
                 }

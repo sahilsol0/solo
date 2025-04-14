@@ -12,7 +12,7 @@ function ResumeSection() {
     
     return (
         <section className=" bg-lime-bg py-12 text-lime-fg text-4xl/8 font-black flex flex-col items-center tracking-tighter relative overflow-hidden">
-            <div ref={container}>
+            <div ref={container} className="lg:mask-l-from-60% lg:mask-l-to-75% lg:mask-r-from-60% lg:mask-r-to-75%">
                 <Slide direction={'left'} left={"-15%"} progress={scrollYProgress} speed={100}/>
                 <Slide direction={'right'} left={"-25%"} progress={scrollYProgress} speed={50}/>
                 <Slide direction={'left'}  left={"15%"} progress={scrollYProgress} speed={75}/>
@@ -21,6 +21,7 @@ function ResumeSection() {
             </div>
             <p className="!text-lg/4 font-normal tracking-normal">( Click to view )</p>
             <a href="#" className="absolute"><img src={resumeSticker} alt="" className="scale-110"/></a>
+            {/* <div className="inset-0 absolute top-0 left-0 bg-gradient-to-r from-lime-bg via-purple-500 to-lime-bg"></div> */}
       </section>
     )
 }
@@ -44,6 +45,8 @@ const Slide = (props) => {
     return (
       <div className={'px-3 gap-2 flex items-center'}>
         <p className=''>SEE MY RESUME</p>
+        <p className='hidden lg:block'>SEE MY RESUME</p>
+        <p className='hidden lg:block'>SEE MY RESUME</p>
       {/* <span className="relative h-[7.5vw] aspect-[4/2] rounded-full overflow-hidden">
           <Image style={{objectFit: "cover"}} src={src} alt="image" fill/>
       </span> */}

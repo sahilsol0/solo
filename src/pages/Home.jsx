@@ -53,11 +53,11 @@ function Home() {
 				{firstName}<br />{lastName}.
 			</motion.header>
 			
-			<HeroSection name= {firstName}/>
+			<HeroSection name= {firstName} animation={fadeInUp}/>
 			<AboutSection animation={fadeInUp}/>
 			<SkillSection animation={fadeInUp}/>
 
-			<section className="bg-black text-white text-center py-4">
+			<section className="bg-black text-white text-center py-8 lg:py-16">
                 <Link to='/projects' className="pointer">
                     <h1 className="text-3xl/6 font-normal tracking-tighter">SEE MY PROJECTS</h1>
                     <p className="text-md/2 font-thin tracking-normal">( Click to view )</p>
