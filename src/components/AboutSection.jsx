@@ -19,13 +19,13 @@ function AboutSection({animation}) {
 				alt="face of Sahil in a sticker style." 
 			/>
 
-			<motion.h4
+			<motion.h2
 				{...animation}
 				transition={{ delay: .9, duration: 1, ease: 'easeInOut' }}
 				className="text-2xl font-normal tracking-tight text-center px-17 md:px-96"
 			>
 				I am a Computer Science (B.Tech.) graduate specializing in full-stack Python/Django development, handling both front-end and back-end aspects of web creation. <br/><br />Graduated in 2025, I've utilized and polished my skills through projects and internships.
-			</motion.h4>
+			</motion.h2>
 		</section>
     )
 }
