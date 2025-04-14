@@ -62,7 +62,7 @@ function Contact() {
                         <motion.li 
                             key={contact.id}
                             {...animation}
-                            transition={{ delay: 0.2 * contact.id, duration: 1, ease: 'easeInOut' }}
+                            transition={{ delay: 0.1 * contact.id + 0.4, duration: 1, ease: 'easeInOut' }}
                         >
                             <a href={contact.href} target="#" className="flex items-end text-xl underline">{contact.text}<ArrowUpRight /></a>
                         </motion.li>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import faceSticker from "../assets/images/face_sticker.png"
+import faceSticker from "../assets/images/face_sticker.webp"
 
 function AboutSection({animation}) {
     return (
@@ -16,7 +16,8 @@ function AboutSection({animation}) {
 				{...animation}
 				transition={{ delay: 0.7, duration: 1, ease: 'easeInOut' }}
 				src={faceSticker}
-				alt="face of Sahil in a sticker style." 
+				alt="face of Sahil in a sticker style."
+				className="w-36 h-36"
 			/>
 
 			<motion.h2

@@ -19,7 +19,7 @@ function ResumeSection() {
 							<Slide direction={'right'}  left={"15%"} progress={scrollYProgress} speed={150}/>
 							<Slide direction={'left'}  left={"-10%"} progress={scrollYProgress} speed={30}/>
 						</div>
-						<p className="!text-lg/4 font-normal tracking-normal">( Click to view )</p>
+						<p className="!text-lg/4 font-normal tracking-normal">( Click to download )</p>
 						<a 
 							href="/resume.pdf"
 							className="absolute"
