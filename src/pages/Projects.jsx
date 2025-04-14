@@ -4,10 +4,10 @@ import { Link } from "react-router"
 
 function Projects() {
     const projects = [
-        {id: 1, title: "LIBRARY MANAGEMENT SYSTEM", github: "#", images: []},
-        {id: 2, title: "DRIVER SAFETY WEB APP", github: "#", images: []},
-        {id: 3, title: "SORTING ALGORITHM VISUALIZATION", github: "#", images: []},
-        {id: 4, title: "RASTER GRAPHICS ALGORITHM VISUALIZATION", github: "#", images: []},
+        {id: 1, title: "LIBRARY MANAGEMENT SYSTEM", github: "https://github.com/sahilsol0/library_management", images: []},
+        {id: 2, title: "DRIVER SAFETY WEB APP", github: "https://github.com/sahilsol0/NeuroDrive", images: []},
+        {id: 3, title: "SORTING ALGORITHM VISUALIZATION", github: "https://github.com/sahilsol0/sorting-visualization", images: []},
+        {id: 4, title: "RASTER GRAPHICS ALGORITHM VISUALIZATION", github: "https://github.com/sahilsol0/rastervis", images: []},
     ]
 
     const animation = {
