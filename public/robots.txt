@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sahilsolomon.vercel.app//sitemap.xml
