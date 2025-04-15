@@ -3,6 +3,7 @@
 A modern, responsive portfolio website built with React, Vite, and deployed on Vercel.
 
 🌐 **Live Demo:** [https://sahilsolomon.vercel.app/](https://sahilsolomon.vercel.app/)
+
 🙌 **Use this template:** [https://github.com/sahilsol0/solo-portfolio-template]
 
 ## ✨ Features
