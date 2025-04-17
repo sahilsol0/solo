@@ -3,7 +3,7 @@ import { Link } from "react-router"
 
 function HeroSection({name, animation}) {
     return (
-        <section className="font-semibold text-center h-[90vh] pt-8 pb-16 flex flex-col justify-between">
+        <section className="font-semibold text-center h-[80vh] pt-8 pb-16 flex flex-col justify-between">
             <div className="">
                 <motion.p
                     initial={{
@@ -19,7 +19,7 @@ function HeroSection({name, animation}) {
                     transition={{ delay: 2, duration: 1, ease: ['easeInOut'] }}
                     className="text-xl mb-4 tracking-tighter"
                 >
-                    Hello
+                    👋Hello
                 </motion.p>
                 <motion.p
                     {...animation}

@@ -6,8 +6,9 @@ function Projects() {
     const projects = [
         {id: 1, title: "LIBRARY MANAGEMENT SYSTEM", github: "https://github.com/sahilsol0/library_management", images: []},
         {id: 2, title: "DRIVER SAFETY WEB APP", github: "https://github.com/sahilsol0/NeuroDrive", images: []},
-        {id: 3, title: "SORTING ALGORITHM VISUALIZATION", github: "https://github.com/sahilsol0/sorting-visualization", images: []},
-        {id: 4, title: "RASTER GRAPHICS ALGORITHM VISUALIZATION", github: "https://github.com/sahilsol0/rastervis", images: []},
+        {id: 3, title: "Vite + react portfolio template", github: "https://github.com/sahilsol0/solo-portfolio-template.git", images: []},
+        {id: 4, title: "SORTING ALGORITHM VISUALIZATION", github: "https://github.com/sahilsol0/sorting-visualization", images: []},
+        {id: 5, title: "RASTER GRAPHICS ALGORITHM VISUALIZATION", github: "https://github.com/sahilsol0/rastervis", images: []},
     ]
 
     const animation = {
@@ -46,8 +47,8 @@ function Projects() {
                         >
                             <span className="">{project.id}</span>
                             <span className="flex flex-col items-start gap-2">
-                                {project.title}
-                                <a href={project.github} className="!text-base font-normal tracking-normal px-4 py border rounded-full flex items-end gap-2">View on github<ArrowUpRight /></a>
+                                <h2 className="uppercase">{project.title}</h2>
+                                <a href={project.github} className="!text-base font-normal tracking-normal px-4 py border rounded-full flex items-end gap-2" target="_blank">View on github<ArrowUpRight /></a>
                             </span>
                         </motion.h1>
                     ))

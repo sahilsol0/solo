@@ -15,7 +15,7 @@ function SkillSection({animation}) {
         <section className="px-10 py-24 flex flex-col items-center gap-10">
             <motion.h1
                 {...animation}
-				transition={{ delay: 0.5, duration: 1, ease: 'easeInOut' }}
+				transition={{ delay: 0.2, duration: .6, ease: 'easeInOut' }}
                 className="font-black text-4xl tracking-tighter"
             >
                 Skill set
@@ -27,14 +27,14 @@ function SkillSection({animation}) {
                         <div key={skill.id} className="grid grid-cols-8 gap-8">
                             <motion.p
                                 {...animation}
-                                transition={{ delay: 0.5, duration: 1, ease: 'easeInOut' }}
+                                transition={{ delay: 0.1, duration: .6, ease: 'easeInOut' }}
                                 className="col-span-3"
                             >
                                 {skill.title}
                             </motion.p>
                             <motion.p
                                 {...animation}
-                                transition={{ delay: 0.6, duration: 1, ease: 'easeInOut' }}
+                                transition={{ delay: 0.2, duration: .6, ease: 'easeInOut' }}
                                 className="col-span-5"
                             >
                                 {skill.content}

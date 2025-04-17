@@ -13,11 +13,11 @@ function ResumeSection() {
 		return (
 				<section className=" bg-lime-bg py-12 text-lime-fg text-4xl/8 font-black flex flex-col items-center tracking-tighter relative overflow-hidden">
 						<div ref={container} className="lg:mask-l-from-60% lg:mask-l-to-75% lg:mask-r-from-60% lg:mask-r-to-75%">
-							<Slide direction={'left'} left={"-15%"} progress={scrollYProgress} speed={100}/>
-							<Slide direction={'right'} left={"-25%"} progress={scrollYProgress} speed={50}/>
-							<Slide direction={'left'}  left={"15%"} progress={scrollYProgress} speed={75}/>
-							<Slide direction={'right'}  left={"15%"} progress={scrollYProgress} speed={150}/>
-							<Slide direction={'left'}  left={"-10%"} progress={scrollYProgress} speed={30}/>
+							<Slide direction={'left'} left={"-15%"} progress={scrollYProgress} speed={200}/>
+							<Slide direction={'right'} left={"-5%"} progress={scrollYProgress} speed={150}/>
+							<Slide direction={'left'}  left={"-15%"} progress={scrollYProgress} speed={75}/>
+							<Slide direction={'right'}  left={"25%"} progress={scrollYProgress} speed={350}/>
+							<Slide direction={'left'}  left={"-10%"} progress={scrollYProgress} speed={100}/>
 						</div>
 						<p className="!text-lg/4 font-normal tracking-normal">( Click to download )</p>
 						<a 
