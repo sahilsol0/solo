@@ -28,7 +28,7 @@ function Home() {
 	}
 
 	const { scrollYProgress } = useScroll();
-	const scaleX = useSpring(scrollYProgress)
+	const scaleX = useSpring(scrollYProgress, { stiffness: 50 })
 	const headerY = useTransform(scrollYProgress, [0, .1], [0, -500]);
 	const [isLoading, setIsLoading] = useState(true);
 
@@ -82,8 +82,9 @@ function Home() {
                     height: 8,
                     originX: 0,
                 }}
-				className="bg-lime-fg"
+				className="bg-linear-to-r from-lime-bg to-lime-fg"
 			/>
+			
 		</>
 	)
 }
