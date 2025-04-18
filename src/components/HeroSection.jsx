@@ -24,7 +24,7 @@ function HeroSection({name, animation}) {
                 <motion.p
                     {...animation}
                     transition={{ delay: 2.2, duration: 1, ease: ['easeInOut'] }}
-                    className="text-5xl/10 lg:text-8xl/25 px-24 lg:px-36 tracking-tightest"
+                    className="text-5xl/10 lg:text-7xl/tight px-24 lg:px-64 tracking-tightest"
                 >
                     I’m {name}, a Python developer with a <span className="italic">creative</span> mind.
                 </motion.p>
