@@ -20,7 +20,7 @@ function ContactSection({animation}) {
                         <motion.li 
                             key={contact.id}
                             {...animation}
-                            transition={{ delay: 0.2 * contact.id, duration: 0.8, ease: 'easeInOut' }}
+                            transition={{ delay: 0.1 * contact.id, duration: 0.8, ease: 'easeInOut' }}
                         >
                             <a href={contact.href} target="#" className="flex items-end">{contact.text}<ArrowUpRight /></a>
                         </motion.li>

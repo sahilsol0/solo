@@ -24,22 +24,15 @@ function SkillSection({animation}) {
             <div className="text-2xl/7 font-medium tracking-tighter flex flex-col gap-10">
                 {
                     skills.map((skill) => (
-                        <div key={skill.id} className="grid grid-cols-8 gap-8">
-                            <motion.p
-                                {...animation}
-                                transition={{ delay: 0.1, duration: .6, ease: 'easeInOut' }}
-                                className="col-span-3"
-                            >
-                                {skill.title}
-                            </motion.p>
-                            <motion.p
-                                {...animation}
-                                transition={{ delay: 0.2, duration: .6, ease: 'easeInOut' }}
-                                className="col-span-5"
-                            >
-                                {skill.content}
-                            </motion.p>
-                        </div>
+                        <motion.div 
+                            key={skill.id} 
+                            {...animation}
+                            transition={{ delay: 0.1 * skill.id, duration: .6, ease: 'easeInOut' }}
+                            className="grid grid-cols-8 gap-8"
+                        >
+                            <p className="col-span-3">{skill.title}</p>
+                            <p className="col-span-5">{skill.content}</p>
+                        </motion.div>
                     ))
                 }
             </div>
